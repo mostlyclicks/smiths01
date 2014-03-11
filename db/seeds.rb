@@ -12,7 +12,12 @@ Refinery::Pages::Engine.load_seed
 Refinery::PagePart.create(
   refinery_page_id:1,
   title:"About",
-  body:"Write a short description about your company here",
+  body:"<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
   position:0
 )
 
@@ -24,7 +29,7 @@ Refinery::PagePart.create(
 )
 
 Refinery::PagePart.create(
-  refinery_page_id:2,
+  refinery_page_id:1,
   title:"Email",
   body:"email@example.com",
   position:2
@@ -87,6 +92,13 @@ Refinery::PagePart.create(
   title:"LinkedIn",
   body:"<i class='fa fa-linkedin-square'></i> <a href=''>Linked In</a>",
   position:8
+)
+
+Refinery::PagePart.create(
+  refinery_page_id:1,
+  title:"Promo",
+  body:"<h1>Promo Headline</h1><p>Promo description (keep it short)</p>",
+  position:9
 )
 
 

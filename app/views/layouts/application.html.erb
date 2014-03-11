@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%= render "/refinery/html_tag" %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <%= render "/refinery/head" %>
+  </head>
+  <body id="<%= canonical_id @page %>">
+    <%= site_bar -%>
+    <div id="page_container">
+      <header id="header">
+        <%#= render "/refinery/header" -%>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <%= image_tag 'rails.png' %>
+            </div>
+            <div class="col-md-9 text-right">
+              <%= yield :phone_email %>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section id="page">
+        <%= yield %>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <%= render "/refinery/footer" -%>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <%= render "/refinery/javascripts" %>
+  </body>
+</html>

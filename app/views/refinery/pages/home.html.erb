@@ -1,0 +1,76 @@
+
+<% content_for :phone_email do %>
+  <%= raw @page.content_for(:phone) %> <%= raw @page.content_for(:email) %>
+<% end %>
+
+<div id="main-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators hidden-xs">
+            <% @page.images.each_with_index do |image, index| %>
+              <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>"></li>
+            <% end %>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <% @page.images.each_with_index do |image, index| %>
+              <div class="item <% if index == 0 %>active<% end %>">
+                <%= image_fu(image, '1140x300c') %>
+               <!--<div class="carousel-caption">
+                 ...
+                </div> -->
+              </div>
+            <% end %>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="fa fa-chevron-left" style="position:absolute;top:47%;"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="fa fa-chevron-right" style="position:absolute;top:47%;"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8" id="about">
+        <%= raw @page.content_for(:about) %>
+      </div>
+      <div class="col-md-4">
+        <%= raw @page.content_for(:promo) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="info-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Hours</h3>
+        <%= raw @page.content_for(:hours) %>
+      </div>
+      <div class="col-md-2">
+        <h3>Location</h3>
+        <%= raw @page.content_for(:location) %>
+      </div>
+      <div class="col-md-2">
+        <h3>Connect with us</h3>
+        <%= raw @page.content_for(:facebook) %><br />
+        <%= raw @page.content_for(:twitter) %><br />
+        <%= raw @page.content_for(:youtube) %><br />
+        <%= raw @page.content_for(:linkedin) %>
+      </div>
+    </div>
+  </div>
+</div>
