@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RefBase01::Application.load_tasks
+Smith01::Application.load_tasks
