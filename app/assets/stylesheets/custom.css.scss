@@ -1,13 +1,50 @@
 @import 'variables.css.scss';
 
-#header {
-  min-height:70px;
-  padding:20px;
+h1, h2, h3, p, {
+  font-family:$source-sans-pro;
+  color:white;
+}
 
+.fa {color:white;}
+
+body {
+  background-color:darken($smiths-blue, 15%);
+}
+
+#header {
+  min-height:60px;
+  padding:20px;
+  background-image:url('/assets/cartographer.png');
+  
+
+  img {
+    margin:0px auto -85px auto;
+    position:relative;
+    z-index:20;
+
+  }
+}
+
+#top-contact {
+  margin-top:40px;
+  .fa, a, p {
+    color:lighten($smiths-blue, 40%);
+  }
+  p {
+    line-height:.75em;
+  }
+  h3 {
+    font-size:15px;
+  }
 }
 
 #main-img {
-
+  margin-top:33px;
+  background-color:rgba(0,0,0,.8);
+  padding:20px 0 20px 0;
+  img {
+    border:12px solid rgba(0,0,0,.2);;
+  }
 }
 
 #main-content {
@@ -19,4 +56,12 @@
 
 #info-content {
 
+}
+
+.carousel-caption h1 {
+  font-weight:700;
+}
+
+.carousel-control.right, .carousel-control.left {  
+  background-image:none !important;
 }

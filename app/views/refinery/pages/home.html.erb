@@ -3,6 +3,15 @@
   <%= raw @page.content_for(:phone) %> <%= raw @page.content_for(:email) %>
 <% end %>
 
+<% content_for :facebook do %>
+  <%= raw @page.content_for(:facebook) %>
+<% end %>
+
+<% content_for :youtube do %>
+  <%= raw @page.content_for(:youtube) %>
+<% end %>
+
+
 <div id="main-img">
   <div class="container">
     <div class="row">
@@ -19,20 +28,22 @@
           <div class="carousel-inner">
             <% @page.images.each_with_index do |image, index| %>
               <div class="item <% if index == 0 %>active<% end %>">
-                <%= image_fu(image, '1140x300c') %>
-               <!--<div class="carousel-caption">
-                 ...
-                </div> -->
+                <%= image_fu(image, '1140x400c') %>
+               <div class="carousel-caption">
+                <h1>Trek Sale</h1>
+                <p>Stop in now an save on all the cool bikes</p>
+                 <%#= image.caption %>
+                </div>
               </div>
             <% end %>
           </div>
 
           <!-- Controls -->
           <a class="left carousel-control" href="#carousel-main" data-slide="prev">
-            <span class="fa fa-chevron-left" style="position:absolute;top:47%;"></span>
+            <span class="fa fa-chevron-circle-left fa-2x" style="position:absolute;top:88%;left:20px;z-index:10000;"></span>
           </a>
           <a class="right carousel-control" href="#carousel-main" data-slide="next">
-            <span class="fa fa-chevron-right" style="position:absolute;top:47%;"></span>
+            <span class="fa fa-chevron-circle-right fa-2x" style="position:absolute;top:88%;right:20px;"></span>
           </a>
         </div>
       </div>
@@ -48,6 +59,16 @@
       </div>
       <div class="col-md-4">
         <%= raw @page.content_for(:promo) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="brands-we-carry">
+  <div clsas="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= raw @page.content_for(:brands) %>
       </div>
     </div>
   </div>

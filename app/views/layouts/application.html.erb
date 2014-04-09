@@ -3,6 +3,7 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
     <%= render "/refinery/head" %>
   </head>
   <body id="<%= canonical_id @page %>">
@@ -12,15 +13,26 @@
         <%#= render "/refinery/header" -%>
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
-              <%= image_tag 'rails.png' %>
+
+            <div class="col-md-12">
+              <%= image_tag 'SmithsBlackLogo-shadow-highlite.png', class: 'img-responsive' %>
             </div>
-            <div class="col-md-9 text-right">
-              <%= yield :phone_email %>
-            </div>
+
           </div>
+
         </div>
       </header>
+
+      <div class="container" id="top-contact">
+        <div class="row">
+          <div class="col-md-6 col-xs-6">
+            <h3><%= yield :phone_email %></h3>
+          </div>
+          <div class="col-md-6 col-xs-6 text-right">
+              <h3><%= yield :facebook %></h3>
+              <%#= yield :youtube %></div>
+        </div>
+      </div>
       <section id="page">
         <%= yield %>
       </section>
