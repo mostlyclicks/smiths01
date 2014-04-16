@@ -47,6 +47,7 @@ body {
   // background-color:rgba(120,120,120,.1);
   background-image:url('/assets/bike-smith-blue.jpg');
   background-position-y:-250px;
+  background-position-x:50%;
   background-color:$smiths-blue;
   background-repeat:no-repeat;
   padding:100px 0 20px 0;
@@ -64,6 +65,7 @@ body {
 #main-content {
   background-image:url('/assets/bike-dark-blue.jpg');
   background-position-y:-750px;
+  background-position-x:50%;
   background-repeat:no-repeat;
   min-height:200px;
   #about {
@@ -81,14 +83,15 @@ body {
 
 #employees {
   height:170px;
-  background-color:lighten($smiths-blue, 20%);
+  // background-color:lighten($smiths-blue, 20%);
+  background-color:darken($orange, 10%);
   img {
     float:right;
     margin-top:-20px;
-    border:12px solid lighten($smiths-blue, 20%);;
+    border:12px solid darken($orange, 10%);
   }
   small {
-    color:lighten($smiths-blue, 40%);
+    color:lighten($orange, 40%);
     margin-left:-.5em;
     font-family:$yellowtail;
     font-size:24px;
