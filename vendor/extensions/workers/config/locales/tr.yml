@@ -1,0 +1,30 @@
+tr:
+  refinery:
+    plugins:
+      workers:
+        title: Workers
+    workers:
+      admin:
+        workers:
+          actions:
+            create_new: Yeni Ekle Worker
+            reorder: Tekrar sirala Workers
+            reorder_done: Tekrar siralama tamamlandiWorkers
+          records:
+            title: Workers
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Workers yok henuz.  Tikla "Yeni Ekle Worker" eklemek senin ilk worker.
+          worker:
+            view_live_html: Bunu canlu worker goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle worker
+            delete: Bunu Sil worker sonsuza dek
+      workers:
+        show:
+          other: Diger Workers
+  activerecord:
+    attributes:
+      'refinery/workers/worker':
+        name: Name
+        pic: Pic
+        job_title: Job Title
+        bio: Bio

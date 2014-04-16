@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      workers:
+        title: Workers
+    workers:
+      admin:
+        workers:
+          actions:
+            create_new: Nieuwe Worker toevoegen
+            reorder: De volgorde van de Workers wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Worker-volgorde
+          records:
+            title: Workers
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Workers. Druk op 'Nieuwe Worker toevoegen' om de eerste toe te voegen.
+          worker:
+            view_live_html: Deze worker op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze worker
+            delete: Deze worker definitief verwijderen
+      workers:
+        show:
+          other: Andere Workers
+  activerecord:
+    attributes:
+      'refinery/workers/worker':
+        name: Name
+        pic: Pic
+        job_title: Job Title
+        bio: Bio

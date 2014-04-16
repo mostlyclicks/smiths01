@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140311154508) do
+ActiveRecord::Schema.define(:version => 20140409215452) do
+
+  create_table "refinery_brands", :force => true do |t|
+    t.string   "name"
+    t.integer  "logo_id"
+    t.string   "website"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -158,6 +167,16 @@ ActiveRecord::Schema.define(:version => 20140311154508) do
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
   add_index "refinery_users", ["slug"], :name => "index_refinery_users_on_slug"
+
+  create_table "refinery_workers", :force => true do |t|
+    t.string   "name"
+    t.integer  "pic_id"
+    t.string   "job_title"
+    t.text     "bio"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"

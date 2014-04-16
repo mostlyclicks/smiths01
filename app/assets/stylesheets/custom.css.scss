@@ -38,24 +38,98 @@ body {
   }
 }
 
-#main-img {
-  margin-top:33px;
-  background-color:rgba(0,0,0,.8);
-  padding:20px 0 20px 0;
-  img {
-    border:12px solid rgba(0,0,0,.2);;
+#main-text {
+  .lead {
+    font-size:40px;
   }
+  min-height: 500px;
+  margin-top:33px;
+  // background-color:rgba(120,120,120,.1);
+  background-image:url('/assets/bike-smith-blue.jpg');
+  background-position-y:-250px;
+  background-color:$smiths-blue;
+  background-repeat:no-repeat;
+  padding:100px 0 20px 0;
+  p {
+    font-size:22px;
+    font-weight:200;
+    span {
+      color:$orange;
+    }
+  }
+
+
 }
 
 #main-content {
+  background-image:url('/assets/bike-dark-blue.jpg');
+  background-position-y:-750px;
+  background-repeat:no-repeat;
   min-height:200px;
   #about {
     padding:22px;
   }
+  img {
+    border:12px solid rgba(0,0,0,.2);
+  }
+}
+
+#about {
+  margin-top:-120px;
+  margin-bottom:40px;
+}
+
+#employees {
+  height:170px;
+  background-color:lighten($smiths-blue, 20%);
+  img {
+    float:right;
+    margin-top:-20px;
+    border:12px solid lighten($smiths-blue, 20%);;
+  }
+  small {
+    color:lighten($smiths-blue, 40%);
+    margin-left:-.5em;
+    font-family:$yellowtail;
+    font-size:24px;
+  }
+  h3 {
+    margin-top:0;
+    font-size:32px;
+    span {
+    color:rgba(255,255,255,.5);
+    }
+  }
+
+}
+
+.worker {
+  margin-top:-60px;
+  
+  img {
+    margin:0 auto;
+  }
+  h3 {
+    margin-top:-50px;
+    text-shadow:1px 1px  rgba(0,0,0, .9);
+  }
+  h4 {
+    margin-top:30px !important;
+    color:#ffffff;
+  }
+
 }
 
 #info-content {
-
+  color:rgba(255,255,255,.7);
+  padding:40px 0;
+  iframe {
+    border:12px solid rgba(255,255,255,.2);
+  }
+  h3 {
+    margin-top:0;
+  }
+  background-image:url('/assets/cartographer.png');
 }
 
 .carousel-caption h1 {
@@ -64,4 +138,89 @@ body {
 
 .carousel-control.right, .carousel-control.left {  
   background-image:none !important;
+}
+
+#brands-we-carry {
+  background-image:url('/assets/josh.jpg');
+  background-size:cover;
+  background-color:white;
+  padding:40px 0;
+  p {
+    color:$smiths-blue;
+  }
+  img {
+    margin:0 auto;
+    border:1px solid #efefef;
+  }
+  h1 {
+    font-size:20px;
+    margin-top:5px;
+    margin-bottom:1.5em;
+  }
+  
+}
+
+#bike-maintenance-packgages {
+  background-image:url(/assets/service-bg.jpg);
+  background-size:cover;
+  padding:40px 0;
+  .well {
+    border-color:rgba(0,0,0,1);
+    background-color:rgba(0,0,0,.7);
+    h1, p {
+      color:white;
+    }
+
+    h1 {
+      margin-top:0;
+      font-size:20px;
+      span {
+        background-color:$smiths-blue;
+        padding:10px;
+        border-radius:50%;
+        float:left;
+        margin-bottom:3em;
+        margin-right:10px;
+        display:block;
+        width:60px;
+        height:60px;
+        font-size:34px;
+      }
+
+    }
+    min-height:150px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.7);
+
+  }
+}
+
+// .brands {
+
+//   margin:5px;
+  
+//   min-height:150px;
+//   .logos {
+    
+//     height:120px;
+//     padding:20px;
+//   }
+//   .brand-names {
+  
+//   }
+//   h1 {
+//     padding-top:10px;
+//     font-size:18px;
+//   }
+//   img {
+//     margin:0 auto;
+//     border:1px solid #efefef;
+//   }
+
+
+// }
+
+footer {
+  padding:10px;
+  text-align:center;
+  color:rgba(255,255,255,.3);
 }

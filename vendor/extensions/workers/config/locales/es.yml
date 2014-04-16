@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      workers:
+        title: Workers
+#        article: masculino/femenino
+    workers:
+      admin:
+        workers:
+          actions:
+            create_new: Crear nuevo worker
+            reorder: Reordenar workers
+            reorder_done: Reordenación de workers completada
+          records:
+            title: Workers
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay workers todavía. Pulsa en "Crear nuevo Worker" para crear tu primer worker.
+          worker:
+            view_live_html: Ver este worker como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este worker
+            delete: Borrar este worker para siempre
+      workers:
+        show:
+          other: Otros workers
+  activerecord:
+    attributes:
+      'refinery/workers/worker':
+        name: Name
+        pic: Pic
+        job_title: Job Title
+        bio: Bio

@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      workers:
+        title: Workers
+    workers:
+      admin:
+        workers:
+          actions:
+            create_new: Aggiungi Nuovo Worker
+            reorder: Riordina Workers
+            reorder_done: Termina il Riordino di Workers
+          records:
+            title: Workers
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Workers. Clicca "Aggiungi Nuovo Worker" per aggiungere il tuo primo worker.
+          worker:
+            view_live_html: Guarda live questo worker <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo worker
+            delete: Rimuovi per sempre questo worker
+      workers:
+        show:
+          other: Altri Workers
+  activerecord:
+    attributes:
+      'refinery/workers/worker':
+        name: Name
+        pic: Pic
+        job_title: Job Title
+        bio: Bio

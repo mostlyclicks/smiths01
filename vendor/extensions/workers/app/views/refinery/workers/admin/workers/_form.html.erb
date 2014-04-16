@@ -1,0 +1,44 @@
+<%= form_for [refinery, :workers_admin, @worker] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @worker,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :pic -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :pic_id,
+               :image => @worker.pic,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :job_title -%>
+    <%= f.text_field :job_title -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:bio],
+                :object => "workers/worker" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.workers.admin.workers.worker'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @worker.name) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

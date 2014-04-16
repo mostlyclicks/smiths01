@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      workers:
+        title: Workers
+    workers:
+      admin:
+        workers:
+          actions:
+            create_new: 建立新的 Worker
+            reorder: 对 Workers 重新排序
+            reorder_done: 对 Workers 的重新排序结束
+          records:
+            title: Workers
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Workers yet. Click "Add New Worker" to add your first worker.
+            no_items_yet: 目前没有 Workers . 点击 "Add New Worker" 创建一个worker.
+          worker:
+            view_live_html: 查看 worker 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 worker
+            delete: 永久删除 worker
+      workers:
+        show:
+          other: 其他 Workers
+  activerecord:
+    attributes:
+      'refinery/workers/worker':
+        name: Name
+        pic: Pic
+        job_title: Job Title
+        bio: Bio

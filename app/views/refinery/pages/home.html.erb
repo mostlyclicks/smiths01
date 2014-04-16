@@ -1,6 +1,9 @@
 
-<% content_for :phone_email do %>
-  <%= raw @page.content_for(:phone) %> <%= raw @page.content_for(:email) %>
+<% content_for :phone do %>
+  <%= raw @page.content_for(:phone) %> 
+<% end %>
+<% content_for :email do %>
+  <%= raw @page.content_for(:email) %>
 <% end %>
 
 <% content_for :facebook do %>
@@ -12,10 +15,21 @@
 <% end %>
 
 
-<div id="main-img">
+<div id="main-text">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <%= raw @page.content_for(:about) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2" id="about">
+
         <div id="carousel-main" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators hidden-xs">
@@ -40,57 +54,161 @@
 
           <!-- Controls -->
           <a class="left carousel-control" href="#carousel-main" data-slide="prev">
-            <span class="fa fa-chevron-circle-left fa-2x" style="position:absolute;top:88%;left:20px;z-index:10000;"></span>
+            <span class="fa fa-chevron-circle-left fa-2x" style="position:absolute;bottom:44%;left:-40px;z-index:10000;"></span>
           </a>
           <a class="right carousel-control" href="#carousel-main" data-slide="next">
-            <span class="fa fa-chevron-circle-right fa-2x" style="position:absolute;top:88%;right:20px;"></span>
+            <span class="fa fa-chevron-circle-right fa-2x" style="position:absolute;bottom:44%;right:-40px;"></span>
           </a>
         </div>
+
+
+
+
+
+
+        
+      </div>
+      <div class="col-md-4 worker text-center">
+      
+
+
+        
       </div>
     </div>
   </div>
 </div>
 
-<div id="main-content">
+<div id="employees">
   <div class="container">
     <div class="row">
-      <div class="col-md-8" id="about">
-        <%= raw @page.content_for(:about) %>
-      </div>
-      <div class="col-md-4">
-        <%= raw @page.content_for(:promo) %>
-      </div>
+      <div class="col-md-3 col-md-offset-1"><%= image_fu(@worker.pic, '220x220#c', class: 'img-responsive img-circle') %></div>
+      <div class="col-md-8appli" style="padding-top:20px;"> 
+      <small>Meet our friendly staff...</small>    
+        <h3><%= @worker.name %><span> | <%= @worker.job_title %></span></h3>
+        
+        <p><%= @worker.bio.html_safe %></p></div>
+      
+
+
     </div>
   </div>
+
+
+
 </div>
 
 <div id="brands-we-carry">
-  <div clsas="container">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <%= raw @page.content_for(:brands) %>
+        <p class="lead text-center">Here are some of the brands you'll find at Smith's Cycling &amp; Fitness</p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        
+        <% @brands.each do |brand| %>
+        <div class="col-md-3 col-xs-6 text-center">
+            
+              
+                <%= image_tag brand.logo.url, class: 'img-responsive img-circle text-center', style: 'display:block;' %>
+              
+                <h1><%= link_to brand.name, brand.website %></h1>
+              
+            
+          
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
+</div>
+
+<div id="bike-maintenance-packgages">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6">
+          <div class="well">
+            <h1><span>#1</span> Bicycle Check-Over</h1>
+            
+            <p>Adjust the following: Brakes, derailleurs, headset, hubs, bottom bracket, lube chain, clean frame
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="well">
+          <h1><span>#2</span> Bicycle Tune-Up</h1>
+          <p>Everything included in #1 <em>PLUS</em> minor wheel truing</p>
+        </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="well">
+            <h1><span>#3</span> Drivetrain Cleaning</h1>
+            <p>Remove and clean chainrings, chain, and cogs in parts washer.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="well">
+            <h1><span>#4</span> Performance Drivetrain/Detailing</h1>
+            <p>Drivetrain &amp; derailleurs, cleaning and lube <em>PLUS</em> a complete bike detailing</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="well">
+            <h1><span>#5</span> Annual Maintenance Package</h1>
+            <p>Our Most Popular! #2 and #4 combined. <em><strong>Save $10</strong></em></p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="well">
+            <h1><span>#6</span> Complete Overhaul</h1>
+            <p>Includes a Tune-up. Performance Drivetrain cleaning, overhaul hubs, headset and bottom bracket. <small>Cable extra</small></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
 </div>
 
 <div id="info-content">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h3>Hours</h3>
         <%= raw @page.content_for(:hours) %>
       </div>
       <div class="col-md-2">
         <h3>Location</h3>
         <%= raw @page.content_for(:location) %>
+        
       </div>
+      <div class="col-md-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.0891589404996!2d-91.24710499999998!3d43.81250999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f955089f2e959b%3A0x66e042dbc611d3dd!2sSmith&#39;s+Cycling+%26+Fitness!5e0!3m2!1sen!2sus!4v1396276003422" width="100%" height="250" frameborder="0" style="border:5"></iframe>
+
+      </div>
+
+
       <div class="col-md-2">
         <h3>Connect</h3>
+        <%= raw @page.content_for(:phone) %>
+        <%= raw @page.content_for(:email) %>
         <%= raw @page.content_for(:facebook) %><br />
-        <%= raw @page.content_for(:twitter) %><br />
+        <!-- <%#= raw @page.content_for(:twitter) %><br /> -->
         <%= raw @page.content_for(:youtube) %><br />
-        <%= raw @page.content_for(:linkedin) %>
+        <!-- <%#= raw @page.content_for(:linkedin) %> -->
       </div>
     </div>
   </div>

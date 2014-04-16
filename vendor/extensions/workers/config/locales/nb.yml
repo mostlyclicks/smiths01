@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      workers:
+        title: Workers
+    workers:
+      admin:
+        workers:
+          actions:
+            create_new: Lag en ny Worker
+            reorder: Endre rekkefølgen på Workers
+            reorder_done: Ferdig å endre rekkefølgen Workers
+          records:
+            title: Workers
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Workers enda. Klikk på "Lag en ny Worker" for å legge til din første worker.
+          worker:
+            view_live_html: Vis hvordan denne worker ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne worker
+            delete: Fjern denne worker permanent
+      workers:
+        show:
+          other: Andre Workers
+  activerecord:
+    attributes:
+      'refinery/workers/worker':
+        name: Name
+        pic: Pic
+        job_title: Job Title
+        bio: Bio

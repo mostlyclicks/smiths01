@@ -102,3 +102,12 @@ Refinery::PagePart.create(
 )
 
 
+
+# Added by Refinery CMS Brands extension
+Refinery::Brands::Engine.load_seed
+
+# Added by Refinery CMS Employees extension
+Refinery::Employees::Engine.load_seed
+
+# Added by Refinery CMS Workers extension
+Refinery::Workers::Engine.load_seed

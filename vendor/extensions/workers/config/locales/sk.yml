@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      workers:
+        title: Workers
+    workers:
+      admin:
+        workers:
+          actions:
+            create_new: Pridať Worker
+            reorder: Preusporiadať Workers
+            reorder_done: Koniec radenia Workers
+          records:
+            title: Workers
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Workers. Kliknite na "Pridať Worker" pre pridanie prvého worker.
+          worker:
+            view_live_html: Zobraziť náhľad worker<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť worker
+            delete: Zmazať worker
+      workers:
+        show:
+          other: Daľšie Workers
+  activerecord:
+    attributes:
+      'refinery/workers/worker':
+        name: Name
+        pic: Pic
+        job_title: Job Title
+        bio: Bio

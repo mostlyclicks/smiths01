@@ -1,0 +1,30 @@
+cs:
+  refinery:
+    plugins:
+      workers:
+        title: Workers
+    workers:
+      admin:
+        workers:
+          actions:
+            create_new: Přidat Worker
+            reorder: Řadit Workers
+            reorder_done: Konec řazení Workers
+          records:
+            title: Workers
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Workers. Zvolte "Přidat Worker" pro přidání prvního worker.
+          worker:
+            view_live_html: Zobrazit náhled worker<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit worker
+            delete: Smazat worker
+      workers:
+        show:
+          other: Další Workers
+  activerecord:
+    attributes:
+      'refinery/workers/worker':
+        name: Name
+        pic: Pic
+        job_title: Job Title
+        bio: Bio
