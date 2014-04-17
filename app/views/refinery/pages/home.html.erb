@@ -45,7 +45,7 @@
                 <%= image_fu(image, '800x533c') %>
                <div class="carousel-caption">
                 
-                 <%= image.caption %>
+                 <%= raw @page.caption_for_image_index(index) %>
                 </div>
               </div>
             <% end %>

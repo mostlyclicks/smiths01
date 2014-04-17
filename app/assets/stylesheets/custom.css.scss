@@ -40,7 +40,7 @@ body {
 
 #main-text {
   .lead {
-    font-size:40px;
+    font-size:48px;
   }
   min-height: 500px;
   margin-top:33px;
@@ -141,8 +141,14 @@ body {
   background-image:url('/assets/cartographer.png');
 }
 
+.carousel-caption p {
+  font-size:20px;
+  font-weight:200;
+}
+
 .carousel-caption h1 {
   font-weight:700;
+  font-size:36px;
 }
 
 .carousel-control.right, .carousel-control.left {  
