@@ -92,7 +92,7 @@ body {
 }
 
 #employees {
-  height:170px;
+  min-height:170px;
   // background-color:lighten($smiths-blue, 20%);
   background-color:darken($orange, 10%);
   img {
@@ -104,11 +104,11 @@ body {
     color:lighten($orange, 40%);
     margin-left:-.5em;
     font-family:$yellowtail;
-    font-size:24px;
+    font-size:18px;
   }
   h3 {
     margin-top:0;
-    font-size:32px;
+    font-size:18px;
     span {
     color:rgba(255,255,255,.5);
     }
@@ -224,30 +224,6 @@ body {
   }
 }
 
-// .brands {
-
-//   margin:5px;
-  
-//   min-height:150px;
-//   .logos {
-    
-//     height:120px;
-//     padding:20px;
-//   }
-//   .brand-names {
-  
-//   }
-//   h1 {
-//     padding-top:10px;
-//     font-size:18px;
-//   }
-//   img {
-//     margin:0 auto;
-//     border:1px solid #efefef;
-//   }
-
-
-// }
 
 footer {
   padding:10px;

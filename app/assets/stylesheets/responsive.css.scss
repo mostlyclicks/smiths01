@@ -52,6 +52,33 @@
 
   }
 
+  #employees {
+  height:170px;
+  // background-color:lighten($smiths-blue, 20%);
+  background-color:darken($orange, 10%);
+  img {
+    float:right;
+    margin-top:-20px;
+    border:12px solid darken($orange, 10%);
+  }
+  small {
+    color:lighten($orange, 40%);
+    margin-left:-.5em;
+    font-family:$yellowtail;
+    font-size:24px;
+  }
+  h3 {
+    margin-top:0;
+    font-size:32px;
+    span {
+    color:rgba(255,255,255,.5);
+    }
+  }
+
+}
+
+
+
 
 }
 
