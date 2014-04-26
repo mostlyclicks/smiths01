@@ -40,7 +40,8 @@ body {
 
 #main-text {
   .lead {
-    font-size:48px;
+    font-size:36px;
+
   }
   min-height: 500px;
   margin-top:33px;
@@ -50,10 +51,11 @@ body {
   background-position-x:50%;
   background-color:$smiths-blue;
   background-repeat:no-repeat;
-  padding:100px 0 20px 0;
+  padding:30px 0 20px 0;
   p {
-    font-size:22px;
+    font-size:20px;
     font-weight:200;
+    padding:0 25px;
     span {
       color:$orange;
     }
@@ -73,7 +75,9 @@ body {
   }
   img {
     border:8px solid rgba(0,0,0,.2);
+    margin-bottom:20px;
   }
+
 }
 
 #about {
@@ -141,14 +145,25 @@ body {
   background-image:url('/assets/cartographer.png');
 }
 
+.carousel-caption {
+  background-color:rgba(0,0,0,.6);
+  top:0px;
+  left:20px;
+  width:50%;
+  height:100%;
+  text-align:left;
+  padding:0 20px 20px 20px;
+}
+
 .carousel-caption p {
-  font-size:20px;
+  font-size:14px;
+  line-height:1em;
   font-weight:200;
 }
 
-.carousel-caption h1 {
+.carousel-caption h2 {
   font-weight:700;
-  font-size:36px;
+  font-size:16px;
 }
 
 .carousel-control.right, .carousel-control.left {  

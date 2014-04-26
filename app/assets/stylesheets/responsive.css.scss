@@ -24,8 +24,32 @@
     padding:0 20px 20px 20px;
   }
 
+  .carousel-caption p {
+    font-size:20px;
+    font-weight:200;
+  }
+
+  .carousel-caption h2 {
+    font-weight:700;
+    font-size:36px;
+  }
+
   #main-img {
     margin-top:10px;
+  }
+
+  #main-text {
+    p {
+      font-size:22px;
+    }
+    .lead {
+      font-size:48px;
+    }
+    padding:50px 0 20px 0;
+  }
+
+  #main-content {
+
   }
 
 
@@ -43,8 +67,18 @@
     }
   }
 
+  #main-content {
+    img {
+      margin-bottom:20px;
+    }
+  }
+
   #main-img {
     margin-top:33px;
+  }
+
+  #main-text {
+    padding:100px 0 20px 0;
   }
 
 
