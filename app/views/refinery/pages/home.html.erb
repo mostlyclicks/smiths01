@@ -71,15 +71,44 @@
 
 <div id="employees">
   <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-md-offset-1 col-xs-4"><%= image_fu(@worker.pic, '220x220#c', class: 'img-responsive img-circle') %></div>
-      <div class="col-md-8 col-xs-8" style="padding-top:20px;"> 
-      <small>Meet our friendly staff...</small>    
-        <h3><%= @worker.name %><span> | <%= @worker.job_title %></span></h3>
-        
-        <p><%= @worker.bio.html_safe %></p></div>
-      
+    <div id="carousel-worker" class="carousel slide" data-ride="carousel" data-interval="false">
 
+      <!-- carousel indicators -->
+      <ol class="carousel-indicators hidden-xs">
+        <% @workers.each_with_index do |w, index| %>
+          <li data-target="#carousel-main" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>"></li>
+        <% end %>
+      </ol>
+
+      <div class="carousel-inner">
+        <!-- will repeat in here -->
+        <% @workers.each_with_index do |w, index| %>
+        <div class="item <% if index == 0 %>active<% end %>">
+
+          <div class="row">
+            <div class="col-md-2 col-md-offset-1 col-xs-4">
+              <%= image_fu(w.pic, '220x220#c', class: 'img-responsive img-circle', style: 'margin-top:15px;border:none;') %>
+            </div>
+
+            <div class="col-md-8 col-xs-8" style="padding-top:20px;"> 
+              <small>Meet our friendly staff...</small>    
+                <h3><%= w.name %><span> | <%= w.job_title %></span></h3>
+                <p><%= w.bio.html_safe %></p>
+            </div>
+          </div>
+
+        </div>
+        <% end %>
+        <!-- END will repeat in here -->
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-worker" data-slide="prev">
+        <span class="fa fa-angle-left fa-2x" style="position:absolute;bottom:44%;left:0px;z-index:10000;"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-worker" data-slide="next">
+        <span class="fa fa-angle-right fa-2x" style="position:absolute;bottom:44%;right:0px;"></span>
+      </a>
 
     </div>
   </div>
@@ -204,3 +233,5 @@
     </div>
   </div>
 </div>
+
+

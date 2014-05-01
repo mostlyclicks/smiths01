@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
 
     def workers
       @workers = Refinery::Workers::Worker.all
-      @worker = @workers.sample
+      # @worker = @workers.sample
     end
 end
