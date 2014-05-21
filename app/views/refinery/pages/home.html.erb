@@ -14,13 +14,22 @@
   <%= raw @page.content_for(:youtube) %>
 <% end %>
 
+<div id="league-of-bicyclist">
+  <di></di>
+
+</div>
+
 
 <div id="main-text">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
         <%= raw @page.content_for(:about) %>
+        <div id="league-of-american-bicyclist" class="text-left">
+          <h3><%= image_tag 'award.png', style: 'float:left;margin:-55px 20px 20px -15px;' %>Smith's Cycling and Fitness is one of six recipients in the state of Wisconsin of The League of American Bicyclists Gold Award.</h3>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
