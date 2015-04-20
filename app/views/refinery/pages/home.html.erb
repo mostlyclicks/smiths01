@@ -18,6 +18,11 @@
   <di></di>
 
 </div>
+<% @bb_images = ['bb-townie.jpg', 'bike-smith-blue.jpg', 'bb-commuter.jpg', 'bb-mtb.jpg', 'bb-fatbike.jpg'] %>
+<% @bg_image = @bb_images.sample %>
+<style>
+  #main-text {background-image:url('/assets/<%= @bg_image %>');}
+</style>
 
 
 <div id="main-text">
