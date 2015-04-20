@@ -43,7 +43,7 @@
 <div id="main-content">
   <div class="container">
     <div class="row" id="about">
-      <div class="col-md-12">
+      <div class="col-md-8 col-md-offset-2">
 
         <div id="carousel-main" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -57,7 +57,8 @@
           <div class="carousel-inner">
             <% @page.images.each_with_index do |image, index| %>
               <div class="item <% if index == 0 %>active<% end %>">
-                <%= image_fu(image, '800x533c') %>
+                <%#= image_fu(image, '800x533c') %>
+                <%= image_tag image, class: 'img-responsive' %>
                <div class="carousel-caption">
                 
                  <%= raw @page.caption_for_image_index(index) %>
