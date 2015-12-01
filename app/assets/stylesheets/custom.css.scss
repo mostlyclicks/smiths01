@@ -38,6 +38,14 @@ body {
   }
 }
 
+#link-to-store {
+  padding:30px 20px;
+  background-color:$orange;
+  h2 a {color:$smiths-blue;}
+
+  }
+}
+
 #main-text {
   .lead {
     font-size:36px;
